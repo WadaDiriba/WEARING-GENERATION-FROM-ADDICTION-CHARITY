@@ -1,0 +1,567 @@
+.take-action-page {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Hero Section */
+.action-hero {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #0a4d8a 100%);
+  color: var(--text-navbar);
+  padding: 100px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="2"/></g></svg>');
+  opacity: 0.3;
+}
+
+.action-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.action-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.action-hero p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Quick Actions Section */
+.quick-actions {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.quick-actions h2 {
+  font-size: 2.5rem;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.action-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.action-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--primary-blue);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.action-card:hover::before {
+  transform: scaleX(1);
+}
+
+.donate-card:hover {
+  box-shadow: 0 8px 30px rgba(58, 143, 62, 0.3);
+}
+
+.donate-card::before {
+  background: var(--secondary-green);
+}
+
+.volunteer-card::before {
+  background: var(--primary-blue);
+}
+
+.partnership-card::before {
+  background: var(--text-heading);
+}
+
+.share-card::before {
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-green));
+}
+
+.card-icon {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.action-card h3 {
+  font-size: 1.8rem;
+  color: var(--text-heading);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.action-card p {
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.action-card:hover .card-link {
+  color: var(--secondary-green);
+}
+
+/* Social Share */
+.social-share {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-share a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-blue);
+  color: var(--text-navbar);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-share a:hover {
+  background: var(--secondary-green);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 4px 12px rgba(58, 143, 62, 0.4);
+}
+
+/* Volunteer Opportunities */
+.volunteer-opportunities {
+  padding: 80px 0;
+  background: white;
+}
+
+.volunteer-opportunities h2 {
+  font-size: 2.5rem;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--text-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.opportunity-card {
+  background: var(--background-light);
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-blue);
+}
+
+.opportunity-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.opportunity-card h3 {
+  font-size: 1.5rem;
+  color: var(--text-heading);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.opportunity-card p {
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.opportunity-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.opportunity-card ul li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.opportunity-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-green);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.opportunity-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--primary-blue);
+  color: var(--text-navbar);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.opportunity-btn:hover {
+  background: var(--secondary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 143, 62, 0.4);
+}
+
+/* Impact Section */
+.impact-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #0a4d8a 100%);
+  color: var(--text-navbar);
+}
+
+.impact-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.05);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: var(--secondary-green);
+  color: var(--text-navbar);
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--text-navbar);
+  color: var(--secondary-green);
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-navbar);
+  border: 2px solid var(--text-navbar);
+}
+
+.btn-secondary:hover {
+  background: var(--text-navbar);
+  color: var(--secondary-green);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-navbar);
+  border: 2px solid var(--text-navbar);
+}
+
+.btn-outline:hover {
+  background: var(--text-navbar);
+  color: var(--secondary-green);
+  transform: translateY(-2px);
+}
+
+/* Resources Section */
+.resources-section {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.resources-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.resource-card {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.resource-card h3 {
+  font-size: 1.4rem;
+  color: var(--text-heading);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.resource-card p {
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.resource-link {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+  color: var(--secondary-green);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .action-cards-grid,
+  .opportunities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .action-hero {
+    padding: 60px 20px;
+  }
+
+  .action-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .action-hero p {
+    font-size: 1.1rem;
+  }
+
+  .quick-actions,
+  .volunteer-opportunities,
+  .impact-section,
+  .cta-section,
+  .resources-section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .quick-actions h2,
+  .volunteer-opportunities h2,
+  .impact-section h2,
+  .cta-content h2,
+  .resources-section h2 {
+    font-size: 2rem;
+  }
+
+  .action-cards-grid,
+  .opportunities-grid,
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-hero h1 {
+    font-size: 2rem;
+  }
+
+  .quick-actions h2,
+  .volunteer-opportunities h2,
+  .impact-section h2,
+  .cta-content h2,
+  .resources-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .action-card,
+  .opportunity-card,
+  .resource-card {
+    padding: 25px 20px;
+  }
+
+  .card-icon,
+  .opportunity-icon {
+    font-size: 3rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
