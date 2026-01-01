@@ -1,17 +1,33 @@
-import styles from "./Navbar.module.css";
+
+import styles from "./Navbar.css";
+import logo from "../../assets/logo.png"
 
 const Navbar = () => {
   return (
-    <nav className={styles.nav}>
-      <h2>WGAC</h2>
-      <ul className={styles.ul}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Programs</li>
-        <li>Donate</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
+    
+     
+     <nav>
+        <img src={logo} alt=""> </img>
+
+          <ul>
+
+
+            <li> Home</li>
+            <li> About</li>
+            // Our Mission
+            //OUR Vision
+            // Goal
+            <li>Take in Action</li>
+            //Donate
+            // Partnership
+            //Volunter
+
+
+            <li> Tesmonial </li>
+            <li>Contact us</li>
+          </ul>
+     </nav>
+
   );
 };
 
