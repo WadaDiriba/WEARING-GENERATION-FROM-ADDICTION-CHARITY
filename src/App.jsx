@@ -12,6 +12,8 @@ import Goal from './components/About/Goal';
 import Partnership from './components/Partnership/Partnership';
 import Volunteer from './components/Volunteer/Volunteer';
 import Testimonial from './components/Testimonial/Testimonial';
+import Privacy from './components/Privacy/Privacy';
+import Terms from './components/Terms/Terms';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/testimonial" element={<Testimonial />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
         <Footer />
       </div>
