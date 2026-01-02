@@ -14,7 +14,7 @@
 
 .nav.scrolled {
   background: rgba(11, 95, 165, 0.98);
-  backdrop-filter: blur(10px);
+
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   padding: 10px 0;
 }
@@ -154,7 +154,7 @@
   opacity: 0;
   transform: translateY(-10px);
   animation: dropdownFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  backdrop-filter: blur(10px);
+ 
 }
 
 @keyframes dropdownFadeIn {

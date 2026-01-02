@@ -34,6 +34,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          
         </Routes>
         <Footer />
       </div>
