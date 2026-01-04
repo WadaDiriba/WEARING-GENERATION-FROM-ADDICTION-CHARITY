@@ -72,12 +72,12 @@ const Footer = () => {
               </p>
               <p>
                 <strong>Phone:</strong><br />
-                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                <a href="tel:+1234567890">+251 91 721 2018</a>
               </p>
               <p>
                 <strong>Address:</strong><br />
-                123 Charity Street<br />
-                City, State 12345
+                Jimma<br />
+                City, Oromia,Ethiopia
               </p>
             </div>
           </div>
