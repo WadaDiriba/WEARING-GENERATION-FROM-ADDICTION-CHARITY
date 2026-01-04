@@ -78,7 +78,7 @@ const About = () => {
           <h2>Our Foundation</h2>
           <div className="goals-grid">
             <Link to="/about/mission" className="goal-card">
-              <div className="goal-icon">🎯</div>
+              <div className="goal-icon">🌱</div>
               <h3>Our Mission</h3>
               <p>Learn about our purpose and what drives us every day to make a difference.</p>
               <span className="goal-link">Learn More →</span>
