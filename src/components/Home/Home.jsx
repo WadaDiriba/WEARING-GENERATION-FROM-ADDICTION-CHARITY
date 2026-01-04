@@ -122,19 +122,19 @@ const Home = () => {
           <h2 className="section-title">How We Help</h2>
           <div className="features-grid">
             <div className="feature-card">
-              <div className="feature-icon"></div>
+              <div className="feature-icon">🌱</div>
               <h3>Our Mission</h3>
               <p>Providing support and resources to help individuals overcome addiction and lead fulfilling lives.</p>
               <Link to="/about/mission" className="feature-link">Learn More →</Link>
             </div>
             <div className="feature-card">
-              <div className="feature-icon"></div>
+              <div className="feature-icon">👁️</div>
               <h3>Our Vision</h3>
               <p>A world where every generation is free from the chains of addiction and can thrive.</p>
               <Link to="/about/vision" className="feature-link">Learn More →</Link>
             </div>
             <div className="feature-card">
-              <div className="feature-icon"></div>
+              <div className="feature-icon"> 🎯</div>
               <h3>Our Goal</h3>
               <p>To create sustainable programs that prevent addiction and support recovery in communities worldwide.</p>
               <Link to="/about/goal" className="feature-link">Learn More →</Link>
@@ -173,7 +173,7 @@ const Home = () => {
               <div className="stat-label">Volunteers</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">2+</div>
+              <div className="stat-number">1+</div>
               <div className="stat-label">Years of Service</div>
             </div>
           </div>
