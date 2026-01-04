@@ -179,6 +179,108 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+{/* Transformation Stories Section */}
+<section className="transformation-showcase">
+  <div className="container">
+    <div className="section-header">
+      <h2 className="section-title">Lives Transformed</h2>
+      <p className="section-subtitle">
+        Witness the journey from addiction to restoration through real stories of change
+      </p>
+    </div>
+
+    <div className="transformation-grid">
+      {/* Transformation Card 1 */}
+      <div className="transformation-card">
+        <div className="image-comparison-container">
+          <div className="image-layer baseline-image">
+            <img 
+              src="https://placehold.co/600x800/4a5568/ffffff?text=Before+Recovery" 
+              alt="Individual before recovery program" 
+              className="transform-image"
+              loading="lazy"
+            />
+            <span className="status-indicator status-before">Before</span>
+          </div>
+          <div className="image-layer progress-image">
+            <img 
+              src="https://placehold.co/600x800/2d3748/ffffff?text=After+Transformation" 
+              alt="Same individual after recovery program" 
+              className="transform-image"
+              loading="lazy"
+            />
+            <span className="status-indicator status-after">After</span>
+          </div>
+          <div className="comparison-slider" aria-label="Drag to compare before and after images"></div>
+        </div>
+        <div className="transformation-details">
+          <h3 className="client-name">Alex M.</h3>
+          <p className="recovery-timeline">18 Months Sober</p>
+        </div>
+      </div>
+
+      {/* Transformation Card 2 */}
+      <div className="transformation-card">
+        <div className="image-comparison-container">
+          <div className="image-layer baseline-image">
+            <img 
+              src="https://placehold.co/600x800/4a5568/ffffff?text=Before+Recovery" 
+              alt="Individual before recovery program" 
+              className="transform-image"
+              loading="lazy"
+            />
+            <span className="status-indicator status-before">Before</span>
+          </div>
+          <div className="image-layer progress-image">
+            <img 
+              src="https://placehold.co/600x800/2d3748/ffffff?text=After+Transformation" 
+              alt="Same individual after recovery program" 
+              className="transform-image"
+              loading="lazy"
+            />
+            <span className="status-indicator status-after">After</span>
+          </div>
+          <div className="comparison-slider" aria-label="Drag to compare before and after images"></div>
+        </div>
+        <div className="transformation-details">
+          <h3 className="client-name">Jamie R.</h3>
+          <p className="recovery-timeline">2 Years Transformed</p>
+        </div>
+      </div>
+
+      {/* Transformation Card 3 */}
+      <div className="transformation-card">
+        <div className="image-comparison-container">
+          <div className="image-layer baseline-image">
+            <img 
+              src="https://placehold.co/600x800/4a5568/ffffff?text=Before+Recovery" 
+              alt="Individual before recovery program" 
+              className="transform-image"
+              loading="lazy"
+            />
+            <span className="status-indicator status-before">Before</span>
+          </div>
+          <div className="image-layer progress-image">
+            <img 
+              src="https://placehold.co/600x800/2d3748/ffffff?text=After+Transformation" 
+              alt="Same individual after recovery program" 
+              className="transform-image"
+              loading="lazy"
+            />
+            <span className="status-indicator status-after">After</span>
+          </div>
+          <div className="comparison-slider" aria-label="Drag to compare before and after images"></div>
+        </div>
+        <div className="transformation-details">
+          <h3 className="client-name">Taylor K.</h3>
+          <p className="recovery-timeline">3 Years Restoration</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
