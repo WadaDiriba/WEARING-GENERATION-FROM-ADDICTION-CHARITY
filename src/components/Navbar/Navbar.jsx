@@ -64,19 +64,19 @@ const Navbar = () => {
               <ul className="dropdown-menu">
                 <li>
                   <Link to="/about/mission" onClick={closeMobileMenu}>
-                    <span className="dropdown-icon">🎯</span>
+                    <span className="dropdown-icon"></span>
                     Our Mission
                   </Link>
                 </li>
                 <li>
                   <Link to="/about/vision" onClick={closeMobileMenu}>
-                    <span className="dropdown-icon">👁️</span>
+                    <span className="dropdown-icon"></span>
                     Our Vision
                   </Link>
                 </li>
                 <li>
                   <Link to="/about/goal" onClick={closeMobileMenu}>
-                    <span className="dropdown-icon">🎯</span>
+                    <span className="dropdown-icon"></span>
                     Our Goal
                   </Link>
                 </li>
@@ -101,19 +101,19 @@ const Navbar = () => {
               <ul className="dropdown-menu">
                 <li>
                   <Link to="/donate" onClick={closeMobileMenu}>
-                    <span className="dropdown-icon">💚</span>
+                    <span className="dropdown-icon"></span>
                     Donate
                   </Link>
                 </li>
                 <li>
                   <Link to="/partnership" onClick={closeMobileMenu}>
-                    <span className="dropdown-icon">🏢</span>
+                    <span className="dropdown-icon"></span>
                     Partnership
                   </Link>
                 </li>
                 <li>
                   <Link to="/volunteer" onClick={closeMobileMenu}>
-                    <span className="dropdown-icon">🤝</span>
+                    <span className="dropdown-icon"></span>
                     Volunteer
                   </Link>
                 </li>
