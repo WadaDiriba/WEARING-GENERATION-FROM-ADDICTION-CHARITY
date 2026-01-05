@@ -95,16 +95,14 @@ const Donate = () => {
       <section className="donate-hero">
         <div className="container">
           <h1>Make a Difference Today</h1>
-          <p className="hero-subtitle">
-            Your donation helps us transform lives and build communities free from addiction
-          </p>
+          <p>Your donation helps us transform lives and build communities free from addiction</p>
         </div>
       </section>
 
       {/* Why Donate Section */}
       <section className="why-donate">
         <div className="container">
-          <h2 className="section-title">Why Your Donation Matters</h2>
+          <h2>Why Your Donation Matters</h2>
           <div className="impact-grid">
             <div className="impact-card">
               <div className="impact-icon">💚</div>
@@ -136,51 +134,48 @@ const Donate = () => {
           <div className="donation-wrapper">
             {/* Left Side - Donation Form */}
             <div className="donation-form-container">
-              <h2 className="form-title">Make Your Donation</h2>
+              <h2>Make Your Donation</h2>
               
               {/* Donation Type */}
-              <div className="donation-type-selector">
+              <div className="donation-type">
                 <button
-                  className={`donation-type-btn ${donationType === 'one-time' ? 'active' : ''}`}
+                  className={`type-btn ${donationType === 'one-time' ? 'active' : ''}`}
                   onClick={() => setDonationType('one-time')}
-                  type="button"
                 >
-                  <span className="donation-type-label">One-Time Donation</span>
+                  One-Time Donation
                 </button>
                 <button
-                  className={`donation-type-btn ${donationType === 'monthly' ? 'active' : ''}`}
+                  className={`type-btn ${donationType === 'monthly' ? 'active' : ''}`}
                   onClick={() => setDonationType('monthly')}
-                  type="button"
                 >
-                  <span className="donation-type-label">Monthly Donation</span>
+                  Monthly Donation
                 </button>
               </div>
 
               {/* Amount Selection */}
-              <div className="amount-selection-section">
-                <h3 className="amount-section-title">Select Amount</h3>
-                <div className="amount-grid-layout">
+              <div className="amount-selection">
+                <h3>Select Amount</h3>
+                <div className="amount-grid">
                   {presetAmounts.map((amount) => (
                     <button
                       key={amount}
-                      className={`amount-option ${selectedAmount === amount ? 'selected' : ''}`}
+                      className={`amount-btn ${selectedAmount === amount ? 'active' : ''}`}
                       onClick={() => handleAmountSelect(amount)}
-                      type="button"
                     >
-                      <span className="amount-value">${amount}</span>
+                      ${amount}
                     </button>
                   ))}
                 </div>
-                <div className="custom-amount-section">
-                  <label className="custom-amount-label">Or Enter Custom Amount</label>
-                  <div className="custom-amount-input-wrapper">
-                    <span className="currency-symbol">$</span>
+                <div className="custom-amount">
+                  <label>Or Enter Custom Amount</label>
+                  <div className="custom-input-wrapper">
+                    <span className="currency">$</span>
                     <input
                       type="text"
                       value={customAmount}
                       onChange={handleCustomAmountChange}
                       placeholder="0.00"
-                      className="custom-amount-field"
+                      className="custom-amount-input"
                     />
                   </div>
                 </div>
@@ -188,11 +183,11 @@ const Donate = () => {
 
               {/* Donation Form */}
               <form className="donation-form" onSubmit={handleSubmit}>
-                <h3 className="form-section-title">Donor Information</h3>
+                <h3>Donor Information</h3>
                 
-                <div className="form-row-layout">
-                  <div className="form-field-group">
-                    <label htmlFor="firstName" className="form-label">First Name *</label>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="firstName">First Name *</label>
                     <input
                       type="text"
                       id="firstName"
@@ -200,11 +195,10 @@ const Donate = () => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="form-input"
                     />
                   </div>
-                  <div className="form-field-group">
-                    <label htmlFor="lastName" className="form-label">Last Name *</label>
+                  <div className="form-group">
+                    <label htmlFor="lastName">Last Name *</label>
                     <input
                       type="text"
                       id="lastName"
@@ -212,14 +206,13 @@ const Donate = () => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="form-input"
                     />
                   </div>
                 </div>
 
-                <div className="form-row-layout">
-                  <div className="form-field-group">
-                    <label htmlFor="email" className="form-label">Email Address *</label>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="email">Email Address *</label>
                     <input
                       type="email"
                       id="email"
@@ -227,80 +220,73 @@ const Donate = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="form-input"
                     />
                   </div>
-                  <div className="form-field-group">
-                    <label htmlFor="phone" className="form-label">Phone Number</label>
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone Number</label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="form-input"
                     />
                   </div>
                 </div>
 
-                <div className="form-field-group">
-                  <label htmlFor="address" className="form-label">Street Address</label>
+                <div className="form-group">
+                  <label htmlFor="address">Street Address</label>
                   <input
                     type="text"
                     id="address"
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
-                    className="form-input"
                   />
                 </div>
 
-                <div className="form-row-layout">
-                  <div className="form-field-group">
-                    <label htmlFor="city" className="form-label">City</label>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="city">City</label>
                     <input
                       type="text"
                       id="city"
                       name="city"
                       value={formData.city}
                       onChange={handleInputChange}
-                      className="form-input"
                     />
                   </div>
-                  <div className="form-row-compact">
-                    <div className="form-field-group">
-                      <label htmlFor="state" className="form-label">State</label>
+                  <div className="form-row-small">
+                    <div className="form-group">
+                      <label htmlFor="state">State</label>
                       <input
                         type="text"
                         id="state"
                         name="state"
                         value={formData.state}
                         onChange={handleInputChange}
-                        className="form-input"
                       />
                     </div>
-                    <div className="form-field-group">
-                      <label htmlFor="zipCode" className="form-label">Zip Code</label>
+                    <div className="form-group">
+                      <label htmlFor="zipCode">Zip Code</label>
                       <input
                         type="text"
                         id="zipCode"
                         name="zipCode"
                         value={formData.zipCode}
                         onChange={handleInputChange}
-                        className="form-input"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="form-field-group">
-                  <label htmlFor="country" className="form-label">Country</label>
+                <div className="form-group">
+                  <label htmlFor="country">Country</label>
                   <select
                     id="country"
                     name="country"
                     value={formData.country}
                     onChange={handleInputChange}
-                    className="form-select"
                   >
                     <option value="United States">United States</option>
                     <option value="Canada">Canada</option>
@@ -312,48 +298,45 @@ const Donate = () => {
 
                 {/* Payment Information */}
                 <div className="payment-section">
-                  <h3 className="form-section-title">Payment Information</h3>
+                  <h3>Payment Information</h3>
                   
-                  <div className="payment-methods-grid">
-                    <label className="payment-method-option">
+                  <div className="payment-methods">
+                    <label className="payment-option">
                       <input
                         type="radio"
                         name="paymentMethod"
                         value="credit-card"
                         checked={formData.paymentMethod === 'credit-card'}
                         onChange={handleInputChange}
-                        className="payment-method-radio"
                       />
-                      <span className="payment-method-label">Credit/Debit Card</span>
+                      <span>Credit/Debit Card</span>
                     </label>
-                    <label className="payment-method-option">
+                    <label className="payment-option">
                       <input
                         type="radio"
                         name="paymentMethod"
                         value="paypal"
                         checked={formData.paymentMethod === 'paypal'}
                         onChange={handleInputChange}
-                        className="payment-method-radio"
                       />
-                      <span className="payment-method-label">PayPal</span>
+                      <span>PayPal</span>
                     </label>
-                    <label className="payment-method-option">
+                    <label className="payment-option">
                       <input
                         type="radio"
                         name="paymentMethod"
                         value="bank-transfer"
                         checked={formData.paymentMethod === 'bank-transfer'}
                         onChange={handleInputChange}
-                        className="payment-method-radio"
                       />
-                      <span className="payment-method-label">Bank Transfer</span>
+                      <span>Bank Transfer</span>
                     </label>
                   </div>
 
                   {formData.paymentMethod === 'credit-card' && (
-                    <div className="card-details-section">
-                      <div className="form-field-group">
-                        <label htmlFor="cardNumber" className="form-label">Card Number *</label>
+                    <div className="card-details">
+                      <div className="form-group">
+                        <label htmlFor="cardNumber">Card Number *</label>
                         <input
                           type="text"
                           id="cardNumber"
@@ -363,11 +346,10 @@ const Donate = () => {
                           placeholder="1234 5678 9012 3456"
                           maxLength="19"
                           required={formData.paymentMethod === 'credit-card'}
-                          className="form-input"
                         />
                       </div>
-                      <div className="form-field-group">
-                        <label htmlFor="cardName" className="form-label">Name on Card *</label>
+                      <div className="form-group">
+                        <label htmlFor="cardName">Name on Card *</label>
                         <input
                           type="text"
                           id="cardName"
@@ -375,12 +357,11 @@ const Donate = () => {
                           value={formData.cardName}
                           onChange={handleInputChange}
                           required={formData.paymentMethod === 'credit-card'}
-                          className="form-input"
                         />
                       </div>
-                      <div className="form-row-layout">
-                        <div className="form-field-group">
-                          <label htmlFor="expiryDate" className="form-label">Expiry Date *</label>
+                      <div className="form-row">
+                        <div className="form-group">
+                          <label htmlFor="expiryDate">Expiry Date *</label>
                           <input
                             type="text"
                             id="expiryDate"
@@ -390,11 +371,10 @@ const Donate = () => {
                             placeholder="MM/YY"
                             maxLength="5"
                             required={formData.paymentMethod === 'credit-card'}
-                            className="form-input"
                           />
                         </div>
-                        <div className="form-field-group">
-                          <label htmlFor="cvv" className="form-label">CVV *</label>
+                        <div className="form-group">
+                          <label htmlFor="cvv">CVV *</label>
                           <input
                             type="text"
                             id="cvv"
@@ -404,7 +384,6 @@ const Donate = () => {
                             placeholder="123"
                             maxLength="4"
                             required={formData.paymentMethod === 'credit-card'}
-                            className="form-input"
                           />
                         </div>
                       </div>
@@ -412,169 +391,149 @@ const Donate = () => {
                   )}
 
                   {formData.paymentMethod === 'paypal' && (
-                    <div className="payment-info-box">
-                      <p className="payment-info-text">
-                        You will be redirected to PayPal to complete your donation securely.
-                      </p>
+                    <div className="payment-info">
+                      <p>You will be redirected to PayPal to complete your donation securely.</p>
                     </div>
                   )}
 
                   {formData.paymentMethod === 'bank-transfer' && (
-                    <div className="payment-info-box">
-                      <p className="payment-info-text"><strong>Bank Transfer Details:</strong></p>
-                      <p className="payment-info-text">Account Name: Weaning Generation Charity</p>
-                      <p className="payment-info-text">Account Number: 1234567890</p>
-                      <p className="payment-info-text">Routing Number: 987654321</p>
-                      <p className="payment-info-text">Bank: Community Bank</p>
+                    <div className="payment-info">
+                      <p><strong>Bank Transfer Details:</strong></p>
+                      <p>Account Name: Weaning Generation Charity</p>
+                      <p>Account Number: 1234567890</p>
+                      <p>Routing Number: 987654321</p>
+                      <p>Bank: Community Bank</p>
                     </div>
                   )}
                 </div>
 
                 {/* Donation Summary */}
-                <div className="donation-summary-card">
+                <div className="donation-summary">
                   <div className="summary-row">
-                    <span className="summary-label">Donation Amount:</span>
-                    <span className="summary-value">${finalAmount.toFixed(2)}</span>
+                    <span>Donation Amount:</span>
+                    <span className="amount">${finalAmount.toFixed(2)}</span>
                   </div>
                   {donationType === 'monthly' && (
                     <div className="summary-row">
-                      <span className="summary-label">Frequency:</span>
-                      <span className="summary-value">Monthly</span>
+                      <span>Frequency:</span>
+                      <span>Monthly</span>
                     </div>
                   )}
-                  <div className="summary-row total-row">
-                    <span className="summary-total-label">Total:</span>
-                    <span className="summary-total-value">${finalAmount.toFixed(2)}</span>
+                  <div className="summary-row total">
+                    <span>Total:</span>
+                    <span className="total-amount">${finalAmount.toFixed(2)}</span>
                   </div>
                 </div>
 
                 {/* Messages */}
                 {submitStatus === 'success' && (
-                  <div className="form-message success-message">
+                  <div className="form-message success">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    <span className="message-text">
-                      Thank you for your generous donation! Your contribution will make a real difference.
-                    </span>
+                    Thank you for your generous donation! Your contribution will make a real difference.
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="form-message error-message">
+                  <div className="form-message error">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <circle cx="12" cy="12" r="10"></circle>
                       <line x1="12" y1="8" x2="12" y2="12"></line>
                       <line x1="12" y1="16" x2="12.01" y2="16"></line>
                     </svg>
-                    <span className="message-text">
-                      Please select or enter a donation amount.
-                    </span>
+                    Please select or enter a donation amount.
                   </div>
                 )}
 
-                <button type="submit" className="donate-action-button" disabled={isSubmitting}>
+                <button type="submit" className="donate-btn" disabled={isSubmitting}>
                   {isSubmitting ? 'Processing...' : `Donate $${finalAmount.toFixed(2)} ${donationType === 'monthly' ? 'Monthly' : 'Now'}`}
                 </button>
 
-                <p className="security-notice">
+                <p className="secure-notice">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                   </svg>
-                  <span className="security-text">
-                    Your donation is secure and encrypted. We never store your payment information.
-                  </span>
+                  Your donation is secure and encrypted. We never store your payment information.
                 </p>
               </form>
             </div>
 
             {/* Right Side - Information */}
-            <div className="donation-info-sidebar">
-              <div className="info-card">
-                <h3 className="info-card-title">How Your Donation Helps</h3>
-                <ul className="impact-breakdown-list">
-                  <li className="impact-breakdown-item">
-                    <span className="impact-amount">$25</span>
-                    <span className="impact-description">- Provides educational materials for one person</span>
+            <div className="donation-info">
+              <div className="info-box">
+                <h3>How Your Donation Helps</h3>
+                <ul className="impact-list">
+                  <li>
+                    <strong>$25</strong> - Provides educational materials for one person
                   </li>
-                  <li className="impact-breakdown-item">
-                    <span className="impact-amount">$50</span>
-                    <span className="impact-description">- Covers counseling session costs</span>
+                  <li>
+                    <strong>$50</strong> - Covers counseling session costs
                   </li>
-                  <li className="impact-breakdown-item">
-                    <span className="impact-amount">$100</span>
-                    <span className="impact-description">- Supports community outreach programs</span>
+                  <li>
+                    <strong>$100</strong> - Supports community outreach programs
                   </li>
-                  <li className="impact-breakdown-item">
-                    <span className="impact-amount">$250</span>
-                    <span className="impact-description">- Funds prevention workshops for youth</span>
+                  <li>
+                    <strong>$250</strong> - Funds prevention workshops for youth
                   </li>
-                  <li className="impact-breakdown-item">
-                    <span className="impact-amount">$500</span>
-                    <span className="impact-description">- Enables recovery support programs</span>
+                  <li>
+                    <strong>$500</strong> - Enables recovery support programs
                   </li>
-                  <li className="impact-breakdown-item">
-                    <span className="impact-amount">$1000+</span>
-                    <span className="impact-description">- Creates long-term sustainable impact</span>
+                  <li>
+                    <strong>$1000+</strong> - Creates long-term sustainable impact
                   </li>
                 </ul>
               </div>
 
-              <div className="info-card">
-                <h3 className="info-card-title">Tax Deductible</h3>
-                <p className="info-card-text">
+              <div className="info-box">
+                <h3>Tax Deductible</h3>
+                <p>
                   All donations are tax-deductible to the full extent allowed by law. 
                   You will receive a receipt for your records.
                 </p>
               </div>
 
-              <div className="info-card">
-                <h3 className="info-card-title">Where Your Money Goes</h3>
-                <div className="spending-breakdown">
+              <div className="info-box">
+                <h3>Where Your Money Goes</h3>
+                <div className="breakdown">
                   <div className="breakdown-item">
-                    <div className="breakdown-visual">
-                      <div className="breakdown-bar">
-                        <div className="breakdown-fill" style={{ width: '75%' }}></div>
-                      </div>
+                    <div className="breakdown-bar">
+                      <div className="breakdown-fill" style={{ width: '75%' }}></div>
                     </div>
-                    <div className="breakdown-label-group">
-                      <span className="breakdown-category">Programs & Services</span>
-                      <span className="breakdown-percentage">75%</span>
+                    <div className="breakdown-label">
+                      <span>Programs & Services</span>
+                      <span>75%</span>
                     </div>
                   </div>
                   <div className="breakdown-item">
-                    <div className="breakdown-visual">
-                      <div className="breakdown-bar">
-                        <div className="breakdown-fill" style={{ width: '15%' }}></div>
-                      </div>
+                    <div className="breakdown-bar">
+                      <div className="breakdown-fill" style={{ width: '15%' }}></div>
                     </div>
-                    <div className="breakdown-label-group">
-                      <span className="breakdown-category">Administration</span>
-                      <span className="breakdown-percentage">15%</span>
+                    <div className="breakdown-label">
+                      <span>Administration</span>
+                      <span>15%</span>
                     </div>
                   </div>
                   <div className="breakdown-item">
-                    <div className="breakdown-visual">
-                      <div className="breakdown-bar">
-                        <div className="breakdown-fill" style={{ width: '10%' }}></div>
-                      </div>
+                    <div className="breakdown-bar">
+                      <div className="breakdown-fill" style={{ width: '10%' }}></div>
                     </div>
-                    <div className="breakdown-label-group">
-                      <span className="breakdown-category">Fundraising</span>
-                      <span className="breakdown-percentage">10%</span>
+                    <div className="breakdown-label">
+                      <span>Fundraising</span>
+                      <span>10%</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="info-card">
-                <h3 className="info-card-title">Other Ways to Give</h3>
-                <ul className="alternative-ways-list">
-                  <li className="alternative-way-item">Corporate Sponsorships</li>
-                  <li className="alternative-way-item">In-Kind Donations</li>
-                  <li className="alternative-way-item">Planned Giving</li>
-                  <li className="alternative-way-item">Volunteer Your Time</li>
+              <div className="info-box">
+                <h3>Other Ways to Give</h3>
+                <ul className="ways-list">
+                  <li>Corporate Sponsorships</li>
+                  <li>In-Kind Donations</li>
+                  <li>Planned Giving</li>
+                  <li>Volunteer Your Time</li>
                 </ul>
               </div>
             </div>
@@ -583,33 +542,33 @@ const Donate = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="donation-faq-section">
+      <section className="donation-faq">
         <div className="container">
-          <h2 className="section-title">Frequently Asked Questions</h2>
-          <div className="faq-grid-layout">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-grid">
             <div className="faq-item">
-              <h3 className="faq-question">Is my donation tax-deductible?</h3>
-              <p className="faq-answer">Yes, all donations are tax-deductible. You will receive a receipt via email that you can use for tax purposes.</p>
+              <h3>Is my donation tax-deductible?</h3>
+              <p>Yes, all donations are tax-deductible. You will receive a receipt via email that you can use for tax purposes.</p>
             </div>
             <div className="faq-item">
-              <h3 className="faq-question">Can I cancel my monthly donation?</h3>
-              <p className="faq-answer">Yes, you can cancel your monthly donation at any time by contacting us or managing your subscription in your account settings.</p>
+              <h3>Can I cancel my monthly donation?</h3>
+              <p>Yes, you can cancel your monthly donation at any time by contacting us or managing your subscription in your account settings.</p>
             </div>
             <div className="faq-item">
-              <h3 className="faq-question">How secure is my payment information?</h3>
-              <p className="faq-answer">We use industry-standard encryption to protect your payment information. We never store your full credit card details on our servers.</p>
+              <h3>How secure is my payment information?</h3>
+              <p>We use industry-standard encryption to protect your payment information. We never store your full credit card details on our servers.</p>
             </div>
             <div className="faq-item">
-              <h3 className="faq-question">Can I donate anonymously?</h3>
-              <p className="faq-answer">Yes, you have the option to donate anonymously during checkout. Your information will remain private.</p>
+              <h3>Can I donate anonymously?</h3>
+              <p>Yes, you have the option to donate anonymously during checkout. Your information will remain private.</p>
             </div>
             <div className="faq-item">
-              <h3 className="faq-question">What payment methods do you accept?</h3>
-              <p className="faq-answer">We accept credit cards, debit cards, PayPal, and bank transfers.</p>
+              <h3>What payment methods do you accept?</h3>
+              <p>We accept credit cards, debit cards, PayPal, and bank transfers.</p>
             </div>
             <div className="faq-item">
-              <h3 className="faq-question">Will I receive a receipt?</h3>
-              <p className="faq-answer">Yes, you will receive an email receipt immediately after your donation is processed.</p>
+              <h3>Will I receive a receipt?</h3>
+              <p>Yes, you will receive an email receipt immediately after your donation is processed.</p>
             </div>
           </div>
         </div>
@@ -619,3 +578,4 @@ const Donate = () => {
 };
 
 export default Donate;
+
