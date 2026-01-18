@@ -432,12 +432,14 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 20px;
   line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-subtitle {
+  font: 1em sans-serif;
   font-size: 1.3rem;
   margin-bottom: 40px;
   line-height: 1.6;
